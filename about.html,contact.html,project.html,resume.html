@@ -1,0 +1,22 @@
+<!-- Replace the existing mobile menu button with this -->
+<button class="md:hidden mobile-menu-button p-2 rounded-lg hover:bg-white/5">
+    <div class="hamburger w-6 h-5 relative flex flex-col justify-between">
+        <span class="w-full h-0.5 bg-white/60 rounded-full transform transition-all duration-300"></span>
+        <span class="w-full h-0.5 bg-white/60 rounded-full transform transition-all duration-300"></span>
+        <span class="w-full h-0.5 bg-white/60 rounded-full transform transition-all duration-300"></span>
+    </div>
+</button>
+
+<!-- Make sure the mobile menu has these classes -->
+<div class="mobile-menu hidden md:hidden">
+    <div class="flex flex-col space-y-4 px-4 py-6 bg-primary/95 backdrop-blur-md border-t border-white/5">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="project.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="resume.html" class="px-4 py-2 border border-accent/20 text-accent hover:bg-accent/10 rounded-md transition-all text-center">Resume</a>
+    </div>
+</div>
+
+<!-- Add this before closing body tag -->
+<script src="js/navbar.js"></script> 

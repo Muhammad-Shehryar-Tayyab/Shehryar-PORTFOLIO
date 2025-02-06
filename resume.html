@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Modern Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resume.css">
+    
+    <!-- Font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#0C0C0C] text-white font-sans">
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 bg-primary/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-2xl font-bold text-accent hover:text-accent/80 transition-colors">S.</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="project.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="resume.html" class="nav-link active">Resume</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Progress Bar -->
+    <div class="fixed left-0 top-0 h-full w-1 bg-white/5">
+        <div class="progress-bar bg-accent h-0"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <!-- Hero Section -->
+        <section class="min-h-[80vh] relative flex items-center">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <!-- Profile Image -->
+                        <div class="profile-container relative w-48 h-48 md:w-64 md:h-64">
+                            <div class="profile-glow absolute inset-0 bg-accent/20 blur-2xl"></div>
+                            <img src="images/your image/shehryar-removebg-preview.png" alt="Profile" 
+                                 class="w-full h-full object-cover rounded-2xl border-2 border-accent/20">
+                        </div>
+
+                        <!-- Info -->
+                        <div class="text-center md:text-left relative z-10">
+                            <!-- Name with animated gradient -->
+                            <div class="name-container relative">
+                                <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-accent to-purple-400 bg-clip-text text-transparent animate-gradient">
+                                    Shehryar Tayyab
+                                </h1>
+                                <div class="absolute -inset-1 bg-gradient-to-r from-accent/20 to-purple-500/20 blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                            </div>
+
+                            <!-- Animated role title -->
+                            <div class="role-container mb-6">
+                                <span class="text-xl font-medium text-accent inline-flex items-center gap-3">
+                                    <span class="typing-text">Full Stack Developer</span>
+                                    <span class="inline-block w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                                </span>
+                            </div>
+
+                            <!-- Bio with animated underline -->
+                            <p class="text-white/70 text-lg max-w-xl mb-8 leading-relaxed hover-underline-animation">
+                                Crafting digital experiences with code and creativity. 
+                                Specialized in building modern web applications that combine 
+                                aesthetic design with powerful functionality.
+                            </p>
+
+                            <!-- Stats Grid -->
+                            <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                                <div class="stat-item group">
+                                    <div class="stat-value font-bold text-2xl text-accent">5+</div>
+                                    <div class="stat-label text-sm text-white/60">Years Experience</div>
+                                    <div class="stat-line"></div>
+                                </div>
+                                <div class="stat-item group">
+                                    <div class="stat-value font-bold text-2xl text-accent">50+</div>
+                                    <div class="stat-label text-sm text-white/60">Projects Completed</div>
+                                    <div class="stat-line"></div>
+                                </div>
+                                <div class="stat-item group">
+                                    <div class="stat-value font-bold text-2xl text-accent">20+</div>
+                                    <div class="stat-label text-sm text-white/60">Happy Clients</div>
+                                    <div class="stat-line"></div>
+                                </div>
+                                <div class="stat-item group">
+                                    <div class="stat-value font-bold text-2xl text-accent">10+</div>
+                                    <div class="stat-label text-sm text-white/60">Awards Won</div>
+                                    <div class="stat-line"></div>
+                                </div>
+                            </div>
+
+                            <!-- Enhanced CTA Buttons -->
+                            <div class="flex flex-wrap gap-6 justify-center md:justify-start items-center">
+                                <a href="#" class="cta-button primary group relative overflow-hidden">
+                                    <span class="relative z-10 flex items-center gap-2">
+                                        Download Resume
+                                        <svg class="w-5 h-5 transition-transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                </a>
+                                
+                                <a href="#contact" class="cta-button secondary group">
+                                    <span class="relative z-10 flex items-center gap-2">
+                                        Let's Talk
+                                        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <!-- Social Links -->
+                                <div class="social-links flex gap-4 ml-auto">
+                                    <a href="#" class="social-icon-btn group" aria-label="GitHub">
+                                        <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-icon-btn group" aria-label="LinkedIn">
+                                        <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background Elements -->
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="py-24 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title flex items-center gap-3 text-3xl font-bold">
+                    <span class="text-accent">#</span> Experience Timeline
+                    <div class="h-[1px] flex-grow bg-gradient-to-r from-accent/50 to-transparent ml-4"></div>
+                </h2>
+                
+                <div class="timeline-container mt-16 relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 md:left-1/2 h-full w-[2px] bg-gradient-to-b from-accent/50 via-accent/20 to-transparent"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="timeline-item group">
+                        <div class="time-badge">
+                            <span class="year">2023</span>
+                            <span class="duration">Present</span>
+                        </div>
+                        
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="text-2xl font-bold text-white group-hover:text-accent transition-colors">
+                                    Senior Full Stack Developer
+                                </h3>
+                                <div class="company-info">
+                                    <span class="company-name text-accent">Tech Company Inc.</span>
+                                    <span class="location text-white/60">• New York, USA</span>
+                                </div>
+                            </div>
+                            
+                            <div class="achievements-list mt-4 space-y-3">
+                                <div class="achievement-item flex items-start gap-3">
+                                    <span class="achievement-bullet">▹</span>
+                                    <p class="text-white/70">Led development of enterprise web applications using React and Node.js, resulting in 40% performance improvement</p>
+                                </div>
+                                <div class="achievement-item flex items-start gap-3">
+                                    <span class="achievement-bullet">▹</span>
+                                    <p class="text-white/70">Managed and mentored a team of 5 developers, implementing agile methodologies</p>
+                                </div>
+                                <div class="achievement-item flex items-start gap-3">
+                                    <span class="achievement-bullet">▹</span>
+                                    <p class="text-white/70">Architected and deployed microservices infrastructure using Docker and AWS</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack mt-6">
+                                <div class="tech-tags flex flex-wrap gap-2">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">AWS</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more timeline items with different years -->
+                    <div class="timeline-item group">
+                        <div class="time-badge">
+                            <span class="year">2021</span>
+                            <span class="duration">2 Years</span>
+                        </div>
+                        
+                        <div class="content-card">
+                            <!-- Similar structure as above -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title flex items-center gap-3 text-3xl font-bold">
+                    <span class="text-accent">#</span> Skills & Expertise
+                    <div class="h-[1px] flex-grow bg-gradient-to-r from-accent/50 to-transparent ml-4"></div>
+                </h2>
+
+                <div class="skills-container mt-16">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Frontend Skills -->
+                        <div class="skill-category-card group">
+                            <div class="card-header">
+                                <span class="category-icon">🎨</span>
+                                <h3 class="category-title">Frontend Development</h3>
+                            </div>
+                            
+                            <div class="skills-list space-y-4">
+                                <div class="skill-item" data-level="95">
+                                    <div class="skill-header">
+                                        <span class="skill-name">React.js</span>
+                                        <span class="skill-level">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                    <div class="skill-tooltip">Advanced React Hooks & Performance Optimization</div>
+                                </div>
+
+                                <div class="skill-item" data-level="90">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Next.js</span>
+                                        <span class="skill-level">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                    <div class="skill-tooltip">Server-Side Rendering & API Routes</div>
+                                </div>
+
+                                <div class="skill-item" data-level="85">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Tailwind CSS</span>
+                                        <span class="skill-level">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                    <div class="skill-tooltip">Custom Configurations & Animations</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Backend Skills -->
+                        <div class="skill-category-card group">
+                            <div class="card-header">
+                                <span class="category-icon">⚙️</span>
+                                <h3 class="category-title">Backend Development</h3>
+                            </div>
+                            <!-- Add backend skills similar to frontend -->
+                        </div>
+
+                        <!-- Other Skills -->
+                        <div class="skill-category-card group">
+                            <div class="card-header">
+                                <span class="category-icon">🛠️</span>
+                                <h3 class="category-title">Tools & Others</h3>
+                            </div>
+                            <!-- Add other skills -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase -->
+        <section class="py-24 bg-white/5">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title flex items-center gap-3 text-3xl font-bold">
+                    <span class="text-accent">#</span> Featured Projects
+                    <div class="h-[1px] flex-grow bg-gradient-to-r from-accent/50 to-transparent ml-4"></div>
+                </h2>
+
+                <div class="projects-grid mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card group">
+                        <div class="project-image relative overflow-hidden rounded-t-xl">
+                            <img src="images/projects/download.jpg" alt="E-Commerce Platform" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        
+                        <div class="project-content p-6 bg-white/5 backdrop-blur-sm rounded-b-xl">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">E-Commerce Platform</h3>
+                            <p class="text-white/60 mb-4">Full-stack e-commerce solution with real-time inventory management and payment processing</p>
+                            
+                            <div class="tech-stack mb-6 flex flex-wrap gap-2">
+                                <span class="tech-pill">Next.js</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">MongoDB</span>
+                                <span class="tech-pill">Stripe</span>
+                            </div>
+                            
+                            <div class="project-links flex gap-4">
+                                <a href="#" class="project-link primary">
+                                    <span>View Live</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <span>Source Code</span>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white/5">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-white/60 max-w-2xl mx-auto mb-8">
+                    Interested in working together? Let's talk about your project.
+                </p>
+                <a href="mailto:your@email.com" class="contact-btn">
+                    Say Hello
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/resume.js"></script>
+</body>
+</html> 

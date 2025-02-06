@@ -1,0 +1,359 @@
+/* Enhanced Resume Styles */
+.resume-section {
+    @apply mb-16 opacity-0 translate-y-4;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.resume-section:nth-child(2) { animation-delay: 0.2s; }
+.resume-section:nth-child(3) { animation-delay: 0.4s; }
+.resume-section:nth-child(4) { animation-delay: 0.6s; }
+
+/* Section Title Animation */
+.section-title {
+    @apply text-2xl font-bold mb-8 relative inline-block;
+}
+
+.section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent;
+    animation: lineGrow 0.6s ease-out 0.6s forwards;
+}
+
+/* Skill Bars Animation */
+.skill-bar {
+    @apply h-2 bg-white/10 rounded-full overflow-hidden relative;
+}
+
+.skill-progress {
+    @apply absolute top-0 left-0 h-full bg-accent transform -translate-x-full;
+    animation: progressGrow 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Timeline Styles */
+.timeline-container {
+    @apply relative space-y-12 pl-8 md:pl-0;
+}
+
+.timeline-item {
+    @apply relative md:grid md:grid-cols-[1fr,3fr] gap-8;
+}
+
+/* Time Badge */
+.time-badge {
+    @apply flex flex-col items-end mb-4 md:mb-0 relative;
+}
+
+.time-badge::before {
+    content: '';
+    @apply absolute right-[-2rem] md:right-[-1rem] top-3 w-4 h-4 bg-accent rounded-full;
+    box-shadow: 0 0 0 6px rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .time-badge::before {
+    @apply bg-white;
+    box-shadow: 0 0 0 8px rgba(100, 255, 218, 0.2);
+}
+
+.year {
+    @apply text-2xl font-bold text-white;
+}
+
+.duration {
+    @apply text-sm text-white/60;
+}
+
+/* Content Card */
+.content-card {
+    @apply p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm
+           transform transition-all duration-300;
+}
+
+.timeline-item:hover .content-card {
+    @apply border-accent/20 bg-accent/5 -translate-y-1;
+}
+
+/* Achievement Bullet */
+.achievement-bullet {
+    @apply text-accent font-mono;
+}
+
+/* Tech Tags */
+.tech-tag {
+    @apply px-3 py-1 text-sm rounded-full bg-accent/10 text-accent 
+           border border-accent/20 hover:bg-accent/20 transition-all duration-300;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes progressGrow {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-item {
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.4s; }
+.timeline-item:nth-child(4) { animation-delay: 0.6s; }
+
+/* Project Cards */
+.project-card {
+    @apply overflow-hidden rounded-xl border border-white/10 hover:border-accent/20 
+           transform hover:-translate-y-2 transition-all duration-300;
+}
+
+/* Certificate Cards */
+.cert-card {
+    @apply flex items-start gap-4 p-6 rounded-xl bg-secondary/30 border border-white/5 
+           hover:border-accent/20 transition-all duration-300;
+}
+
+.cert-icon {
+    @apply text-3xl transform hover:scale-110 transition-transform;
+}
+
+/* Contact Info Items */
+.contact-item {
+    @apply flex items-center gap-4 p-6 rounded-xl bg-secondary/30 border border-white/5 
+           hover:border-accent/20 transition-all duration-300;
+}
+
+.contact-item .icon {
+    @apply w-12 h-12 flex items-center justify-center rounded-lg bg-accent/10 text-accent 
+           group-hover:scale-110 transition-all duration-300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 1rem;
+    }
+    
+    .time-badge {
+        @apply items-start;
+    }
+    
+    .content-card {
+        @apply ml-8;
+    }
+    
+    .skills-grid {
+        @apply grid-cols-1;
+    }
+    
+    .projects-grid {
+        @apply grid-cols-1;
+    }
+}
+
+/* Animated gradient text */
+.animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+/* Hover underline animation */
+.hover-underline-animation {
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Stats styling */
+.stat-item {
+    @apply p-4 rounded-lg bg-white/5 backdrop-blur-sm relative overflow-hidden;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    @apply bg-white/10;
+    transform: translateY(-2px);
+}
+
+.stat-line {
+    @apply absolute bottom-0 left-0 w-0 h-1 bg-accent/50;
+    transition: width 0.3s ease;
+}
+
+.stat-item:hover .stat-line {
+    width: 100%;
+}
+
+/* CTA Buttons */
+.cta-button {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+}
+
+.cta-button.primary {
+    @apply bg-accent text-primary hover:bg-accent/90;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+}
+
+.cta-button.secondary {
+    @apply border border-white/10 text-white hover:border-accent/50 hover:text-accent;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Social Icons */
+.social-icon-btn {
+    @apply w-10 h-10 flex items-center justify-center rounded-lg text-white/60 hover:text-accent transition-colors;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.social-icon-btn:hover {
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+}
+
+/* Typing animation */
+.typing-text::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Skill Category Card */
+.skill-category-card {
+    @apply p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm
+           hover:border-accent/20 transition-all duration-300;
+}
+
+.card-header {
+    @apply flex items-center gap-4 mb-6;
+}
+
+.category-icon {
+    @apply text-2xl;
+}
+
+.category-title {
+    @apply text-xl font-bold text-white/90;
+}
+
+/* Skill Items */
+.skill-item {
+    @apply relative;
+}
+
+.skill-header {
+    @apply flex justify-between items-center mb-2;
+}
+
+.skill-name {
+    @apply text-white/80;
+}
+
+.skill-level {
+    @apply text-accent text-sm;
+}
+
+.skill-bar {
+    @apply h-2 bg-white/10 rounded-full overflow-hidden;
+}
+
+.skill-progress {
+    @apply h-full bg-gradient-to-r from-accent to-purple-500 transform -translate-x-full;
+    animation: progressGrow 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.skill-tooltip {
+    @apply absolute -top-10 left-1/2 transform -translate-x-1/2 px-4 py-2 
+           bg-accent/90 text-primary text-sm rounded-lg opacity-0 invisible
+           group-hover:opacity-100 group-hover:visible transition-all duration-300;
+}
+
+.skill-tooltip::after {
+    content: '';
+    @apply absolute bottom-[-6px] left-1/2 transform -translate-x-1/2
+           border-solid border-t-accent/90 border-t-6 border-x-transparent border-x-6 border-b-0;
+}
+
+/* Project Links */
+.project-link {
+    @apply flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300;
+}
+
+.project-link.primary {
+    @apply bg-accent text-primary hover:bg-accent/90;
+}
+
+.project-link.secondary {
+    @apply bg-white/5 text-white/80 hover:bg-white/10;
+}
+
+.tech-pill {
+    @apply px-3 py-1 text-sm rounded-full bg-accent/10 text-accent 
+           border border-accent/20 hover:bg-accent/20 transition-all duration-300;
+}
+
+/* Animations */
+@keyframes progressGrow {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
